@@ -3,9 +3,11 @@
 
 # How to use
 After following the tutorial, clone this repository and run the following commands:
+
 `npm install` & `bower install`
 
 For building the project, use:
+
 `grunt build`
 
 Enjoy! :)
