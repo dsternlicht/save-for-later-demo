@@ -1,0 +1,27 @@
+{
+  "name": "Markticle",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "icons": {
+    "16": "icons/icon-16.png",
+    "38": "icons/icon-38.png",
+    "128": "icons/icon-128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "scripts": [
+      "scripts/helpers/storage.helper.js",
+      "scripts/background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["bower_components/jquery/jquery.min.js", "scripts/inject.js"]
+    } 
+  ],
+  "browser_action": {
+    "default_icon": "icons/icon-19.png",
+    "default_popup": "index.html"
+  }
+}
