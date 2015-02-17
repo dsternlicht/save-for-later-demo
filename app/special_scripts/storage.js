@@ -1,10 +1,10 @@
 'use strict';
 
 var markticleStorageService = function() {
-        var lsName = 'marks';
-        var data = localStorage.getItem(lsName) ? JSON.parse(localStorage.getItem(lsName)) : [];
-       
-        return {
+  var lsName = 'marks';
+  var data = localStorage.getItem(lsName) ? JSON.parse(localStorage.getItem(lsName)) : [];
+ 
+  return {
    	 
 		get: function() {
 			return data;
@@ -35,5 +35,5 @@ var markticleStorageService = function() {
 			localStorage.setItem(lsName, JSON.stringify(data));
 		}
 
-    };
+  };
 };

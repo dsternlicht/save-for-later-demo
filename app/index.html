@@ -16,7 +16,8 @@
                 <h1>My marks</h1>
             </header>
             <section id="my_marks">
-                <ul>
+                <p ng-if="marks.length < 1">No marks.</p>
+                <ul ng-if="marks.length >= 1">
                     <li ng-repeat="mark in marks">
                         <a target="_blank" ng-href="{{mark.url}}">{{mark.title}}</a>
                         <!-- <span class="remove" ng-click="removeMark(mark.url)">remove</span> -->
@@ -25,14 +26,16 @@
             </section>
         </div>
 
-        <!-- build:js scripts/vendor.js -->
+        <!-- build:js scripts/modules.js -->
         <!-- bower:js -->
-        <script src="bower_components/jquery/jquery.min.js"></script>
-        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="bower_components/jquery/jquery.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
-        <!-- build:js scripts/popup.js -->
+        <script src="special_scripts/storage.js"></script>
+
+        <!-- build:js scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/helpers/storage.helper.js"></script>
         <script src="scripts/services/storage.service.js"></script>

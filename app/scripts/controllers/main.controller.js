@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('markticle').controller('MainController', function($scope, StorageService) {
+angular.module('markticle').controller('MainController', ['$scope', 'StorageService', function($scope, StorageService) {
 	$scope.marks = StorageService.get();
 
 	$scope.removeMark = function(url) {
@@ -12,4 +12,4 @@ angular.module('markticle').controller('MainController', function($scope, Storag
 		}
 	};
 
-});
+}]);
